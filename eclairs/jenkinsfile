@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+stages{ 
+    stage ('chocolates'){
+        environment {
+            awsfile=credentials('awsfile')
+        }
+steps {
+    sh '''
+    ssh -i $awsfile -o StrictHostKeyChecking=no ubuntu@3.21.41.81 'sudo bash -s' < asha.sh
+      '''
+}
+    }
+    
+}
+}
