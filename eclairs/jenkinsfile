@@ -7,7 +7,7 @@ stages{
         }
 steps {
     sh '''
-    ssh -i $awsfile -o StrictHostKeyChecking=no ubuntu@3.21.41.81 'sudo bash -s' < asha.sh
+    ssh -i $awsfile -o StrictHostKeyChecking=no ubuntu@3.21.41.81 'sudo bash -s' < eclairs/asha.sh
       '''
 }
     }
